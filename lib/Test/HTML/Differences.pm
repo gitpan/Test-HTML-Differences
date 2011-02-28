@@ -9,7 +9,7 @@ use Text::Diff;
 use Text::Diff::Table;
 use Test::Differences;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our @EXPORT = qw(
 	eq_or_diff_html
@@ -88,7 +88,7 @@ sub normalize_html {
 				sub {
 					my ($dtext) = @_;
 					$dtext =~ s/^\s+|\s+$//g;
-					push @{ $stack->[-1]->[2] }, $dtext if $dtext =~ /\S/;
+					push @{ $stack->[-1]->[2] }, encode_entities($dtext) if $dtext =~ /\S/;
 				},
 				"dtext"
 			]

@@ -1,3 +1,9 @@
+2011-02-28  SATOH Hiroh <cho45@lowreal.net>
+
+	* 0.03:
+	Updated dependency problem about HTML::Differences.
+	Fixed treating entities.
+
 2010-12-07  SATOH Hiroh <cho45@lowreal.net>
 
 	* 0.02:
